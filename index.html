@@ -1,0 +1,218 @@
+<!doctype html>
+
+<html lang="en" manifest="offline.appcache">
+<head>
+	<meta charset="utf-8">
+
+	<title>Mobile Quiz Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mobile Quiz Game">
+	<meta name="author" content="Roy Galet s244715">
+
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="icon" type="image/png" href="img/logo.png" />
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/questions.js"></script>
+</head>
+
+<body>
+	<!--Welcome Page -->
+
+	<section data-role="page" id="welcome">
+		<div data-role="content" class="centered_content">
+			<p>
+			<img src="img/logo.png" alt="logo image" id="logo">	
+			</p>
+			<h1>
+				Mobile Quiz Game
+			</h1>
+		</div>
+		<div data-role="content" class="centered_content">
+			<a data-role="button" href="#quiz_page1" class="select ui-btn ui-btn-b ui-shadow ui-corner-all ui-btn-inline ui-icon-carat-r ui-btn-icon-right" data-transition="slide">Start a Quiz</a>
+				<p>
+					Powered by:
+					<img src="img/html5.png" alt="HTML5 logo" class="smalllogo">
+					<img src="img/js.png" alt="JavaScript logo" class="smalllogo">
+					<img src="img/jqm.png" alt="JQuery Mobile logo" class="smalllogo">
+					<img src="img/css.png" alt="CSS logo" class="smalllogo">
+				</p>
+		</div>
+		<div data-role="footer" data-position="fixed" class="centered_footer">
+			<p class="small_footer">
+
+				&nbsp;&copy;Copyright 2014: Roy Galet
+			</p>
+		</div>
+	</section>
+
+	<!--Quiz Page -->
+
+	<section data-role="page" id="quiz_page0">
+		<div data-role="header" data-position="inline" class="centeredHeader">
+			<p id="number0"></p>
+			<a data-role="button" href="#reset_confirmation" class="select ui-btn-right ui-btn ui-btn-inline ui-icon-back ui-btn-icon-left" data-transition="pop">Reset</a>
+		</div>
+		<div data-role="content" class="question">
+			
+			<h3 id="question0">
+				What is your first question?
+			</h3>
+		</div>
+		<div data-role="content" class="choices">
+			<form id="choices0">
+			        <fieldset data-role="controlgroup">
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a0" value="off" class="select">
+				        <label for="radio-choice-v-2a0" id="option10" class="select">One</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b0" value="off" class="select">
+				        <label for="radio-choice-v-2b0" id="option20" class="select">Two</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c0" value="off" class="select">
+				        <label for="radio-choice-v-2c0" id="option30" class="select">Three</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2d0" value="off" class="select">
+				        <label for="radio-choice-v-2d0" id="option40" class="select">Four</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2e0" value="off" class="select">
+				        <label for="radio-choice-v-2e0" id="option50" class="select">Don't Know</label>
+				</fieldset>
+			</form>
+		</div>
+		<div data-role="footer">
+			<a data-role="button" id="finalize0" href="#quiz_page1" class="ui-btn ui-btn-b ui-shadow ui-corner-all ui-btn-inline ui-btn-right ui-icon-check ui-btn-icon-right" data-transition="slide">Finalize Answer</a>
+		</div>
+	</section>
+	
+	<section data-role="page" id="quiz_page1">
+		<div data-role="header" data-position="inline" class="centeredHeader">
+			<p id="number1"></p>
+			<a data-role="button" href="#reset_confirmation" class="select ui-btn-right ui-btn ui-btn-inline ui-icon-back ui-btn-icon-left" data-transition="pop">Reset</a>
+		</div>
+		<div data-role="content" class="question">
+			
+			<h3 id="question1">
+				What is your first question?
+			</h3>
+		</div>
+		<div data-role="content" class="choices">
+			<form id="choices1">
+			        <fieldset data-role="controlgroup">
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a1" value="off" class="select">
+				        <label for="radio-choice-v-2a1" id="option11" class="select">One</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b1" value="off" class="select">
+				        <label for="radio-choice-v-2b1" id="option21" class="select">Two</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c1" value="off" class="select">
+				        <label for="radio-choice-v-2c1" id="option31" class="select">Three</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2d1" value="off" class="select">
+				        <label for="radio-choice-v-2d1" id="option41" class="select">Four</label>
+				        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2e1" value="off" class="select">
+				        <label for="radio-choice-v-2e1" id="option51" class="select">Don't Know</label>
+				</fieldset>
+			</form>
+		</div>
+		<div data-role="footer">
+			<a data-role="button" id="finalize1" href="#quiz_page0" class="ui-btn ui-btn-b ui-shadow ui-corner-all ui-btn-inline ui-btn-right ui-icon-check ui-btn-icon-right" data-transition="slide">Finalize Answer</a>
+		</div>
+	</section>
+
+	<!-- Reset Confirmation  -->
+
+	<section data-role="page" id="reset_confirmation">
+		<div data-role="content" class="centered_content">
+			<img src="img/warning.png" alt="warning image" id="warning">	
+			<h3>
+				Warning:<br>Your progress will be lost.<br>Are you sure?
+			</h3>
+			<a href='javascript:history.go(-1)' class="select ui-btn ui-btn-inline ui-icon-back ui-btn-icon-left">Cancel</a>
+			<a href="#welcome" class="select ui-btn ui-btn-b ui-btn-inline ui-icon-carat-r ui-btn-icon-right"  data-transition="flip" id="proceed">Proceed</a>
+		</div>
+	</section>
+
+	<!-- Review -->
+	<section data-role="page" id="review">
+		<div data-role="header" class="centeredHeader">
+			<p>Review</p>
+			<a href="#reset_confirmation" class="select ui-btn ui-btn-right ui-btn-inline ui-icon-back ui-btn-icon-left" data-transition="pop">Reset</a>
+		</div>
+		<div data-role="content" class="centered_content">
+			<table data-role="table" data-mode="reflow" class="ui-responsive" id="reviewTable">
+				<thead>
+					<tr>
+						<th style="width:60%">
+							Question
+						</th>
+						<th data-priority="persist">
+							Your Answer
+						</th>
+					</tr>
+				</thead>
+				<tbody id="reviewanswer">
+					
+				</tbody>
+			</table>
+		</div>
+		<div data-role="footer" >
+			<a data-role="button" id="view_score" href="#results" class="ui-btn ui-btn-b ui-shadow ui-corner-all ui-btn-right ui-btn-inline ui-icon-check ui-btn-icon-right" data-transition="slide">View your Score</a>
+		</div>
+	</section>	
+		<!-- Results -->
+		
+	<section data-role="page" id="results">
+		<div data-role="content" class="centered_content">
+			<h2>
+				Your Score:
+			</h2>
+			<h1 id="score">
+				100
+			</h1>
+		<!-- </div>
+		<div data-role="content"> -->
+			<a href="#summary" class="select ui-btn ui-mini ui-btn-inline" data-transition="pop">Details</a>
+			<br>
+			<a href="#quiz_page1" id="new_quiz" class="select ui-btn ui-btn-b ui-shadow ui-corner-all ui-btn-inline ui-icon-carat-r ui-btn-icon-right" data-transition="flip">Start a New Quiz</a>
+		</div>
+	</section>
+	<!-- Summary -->
+	<section data-role="page" id="summary">
+		<div data-role="header" class="centeredHeader">
+			<p>Summary</p>
+		</div>
+		<div data-role="content" class="centered_content">
+			<table data-role="table" data-mode="reflow" class="ui-responsive" id="summaryTable">
+				<thead>
+					<tr>
+						<th style="width:60%">
+							Question
+						</th>
+						<th data-priority="persist">
+							Your Answer
+						</th>
+						<th data-priority="persist">
+							Correct Answer
+						</th>
+						<th data-priority="persist">
+							Score
+						</th>
+					</tr>
+				</thead>
+				<tbody id="summaryAnswer">
+					
+				</tbody>
+			</table>
+			<h4>
+				Your Score:
+			</h4>
+			<h3 id="totalscore">
+				100
+			</h3>
+		</div>
+		<div data-role="content">
+			<a href='javascript:history.go(-1)' class="select ui-btn ui-btn-inline ui-icon-back ui-btn-icon-left" data-transition="pop" data-direction="reverse">Back to Results</a>
+		</div>
+	</section>
+	<audio id="clickSound"><source src="audio/select.mp3"></audio>
+	<audio id="correctSound"><source src="audio/correct.mp3"></audio>
+	<audio id="wrongSound"><source src="audio/wrong.mp3"></audio>
+	<audio id="winnerSound"><source src="audio/winner.mp3"></audio>
+	<audio id="loserSound"><source src="audio/loser.mp3"></audio>
+</body>
+</html>
